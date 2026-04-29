@@ -17,7 +17,16 @@ class AIMessage extends Message
     {
         $data = parent::toArray();
         if (!empty($this->toolCalls)) {
-            $data['tool_calls'] = $this->toolCalls;
+            $data['tool_calls'] = array_map(function ($call) {
+                return [
+                    'id' => $call['id'],
+                    'type' => 'function',
+                    'function' => [
+                        'name' => $call['name'],
+                        'arguments' => json_encode($call['args'])
+                    ]
+                ];
+            }, $this->toolCalls);
         }
         return $data;
     }
