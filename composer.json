@@ -1,0 +1,28 @@
+{
+    "name": "lablnet/hyperflow-php",
+    "description": "HyperFlow PHP port: Framework for building agents that rewrite and test their own improvements.",
+    "type": "library",
+    "require": {
+        "php": "^8.1",
+        "openai-php/client": "^0.19.2",
+        "guzzlehttp/guzzle": "^7.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "HyperFlow\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Muhammad Umer Farooq",
+            "email": "umer@lablnet.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}

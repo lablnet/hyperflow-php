@@ -1,0 +1,9 @@
+/vendor/
+/.env
+/outputs/
+/archive.jsonl
+*.log
+node_modules
+
+*.tar.gz
+.env
