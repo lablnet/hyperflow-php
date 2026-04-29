@@ -1,6 +1,6 @@
 # HyperFlow (PHP)
 <p align="center">
-  <img src="../assets/logo.png" width="150" alt="HyperFlow Logo" />
+  <img src="./assets/logo.png" width="150" alt="HyperFlow Logo" />
 </p>
 
 HyperFlow PHP is a fully functional PHP port of the framework for building agents that rewrite and test their own improvements.
