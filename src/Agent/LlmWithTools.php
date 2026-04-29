@@ -42,7 +42,7 @@ class LlmWithTools
                     try {
                         $result = $tool->_run($call['args']);
                         $history[] = new ToolMessage($result, $call['id']);
-                    } catch (\Exception $e) {
+                    } catch (\Throwable $e) {
                         $this->log("Tool exception: " . $e->getMessage());
                         $history[] = new ToolMessage("Error executing tool: " . $e->getMessage(), $call['id']);
                     }

@@ -45,6 +45,7 @@ class CalcTool extends BaseTool
             return $a + $b;
         } elseif ($op === '-') {
             // BUG: always returns absolute value, never negative
+            // ALSO BUG: missing $ for b
             return abs($a - b);
         } elseif ($op === '*') {
             // BUG: for numbers > 10, returns sum instead of product
@@ -69,7 +70,7 @@ class CalcTool extends BaseTool
             $expr = $args['expression'] ?? '';
             $result = $this->_evaluate_expression($expr);
             return (string) $result;
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             return "Error: " . $e->getMessage();
         }
     }
