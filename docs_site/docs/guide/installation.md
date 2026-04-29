@@ -20,8 +20,8 @@ composer require lablnet/hyperflow-php
 For development and contributing, install from the source repository:
 
 ```bash
-git clone https://github.com/lablnet/HyperFlow.git
-cd HyperFlow/php
+git clone https://github.com/lablnet/hyperflow-php.git
+cd hyperflow-php
 
 composer install
 ```

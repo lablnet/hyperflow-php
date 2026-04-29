@@ -1,4 +1,4 @@
-//#region node_modules/.pnpm/@vuepress+shared@2.0.0-rc.28/node_modules/@vuepress/shared/dist/index.js
+//#region node_modules/.pnpm/@vuepress+client@2.0.0-rc.28_@vue+compiler-sfc@3.5.32/node_modules/@vuepress/shared/dist/index.js
 /**
 * Determine a link has protocol or not
 */

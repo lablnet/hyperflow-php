@@ -121,15 +121,14 @@ sequenceDiagram
 
 ## The evolutionary loop
 
-The loop (see `generate_loop.py`) runs generations until `max_generations` or early stop. Each generation typically:
+The loop (see `src/Core/GenerateLoop.php`) runs generations until `max_generations` or early stop. Each generation typically:
 
-1. **Select parent** from the archive (`select_parent.py`).
-2. **Set up executor** (local or Docker).
-3. **Apply lineage** — replay patches so the workspace matches the parent.
-4. **Run MetaAgent** — produce a new patch from failures and context.
-5. **Run TaskAgent** through the **harness** (staged eval may run first if configured).
-6. **Evaluate** — domain scores predictions; reports under the output directory.
-7. **Update archive** — append a JSONL snapshot with scores and patch paths.
+1. **Select parent** from the archive.
+2. **Set up executor** (currently LocalExecutor in PHP).
+3. **Run MetaAgent** — produce a new modification from failures and context.
+4. **Run TaskAgent** through the **harness**.
+5. **Evaluate** — domain scores predictions; reports under the output directory.
+6. **Update archive** — append a JSONL snapshot with scores and logic changes.
 
 ## The archive
 
@@ -235,11 +234,8 @@ flowchart LR
 | Example | Focus |
 | --- | --- |
 | Bash | Command generation |
-| Scoring | Grading / prompts |
 | Calculator | Tool code fixes |
 | Fact-check | Classification |
-| Paper review | Accept / reject |
-| Git evolution | Patch lineage |
 
 See [Examples](./examples.md) for commands.
 

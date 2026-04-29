@@ -23,7 +23,7 @@ export default defineUserConfig({
     ],
     theme: defaultTheme({
         logo: '/logo.png',
-        repo: 'lablnet/HyperFlow',
+        repo: 'lablnet/hyperflow-php',
         docsDir: 'docs_site/docs',
         navbar: [
             { text: 'Home', link: '/' },

@@ -44,8 +44,8 @@ composer require lablnet/hyperflow-php
 Or install from source for development:
 
 ```bash
-git clone https://github.com/lablnet/HyperFlow.git
-cd HyperFlow/php
+git clone https://github.com/lablnet/hyperflow-php.git
+cd hyperflow-php
 
 composer install
 ```
@@ -59,8 +59,9 @@ composer install
 ## Quick Start
 
 ```bash
-# Set your API key
-export OPENAI_API_KEY="sk-..."
+# Set your API key in .env or export it
+cp .env.example .env
+# Edit .env and set OPENAI_API_KEY
 
 # Run the bash example
 cd examples/bash
@@ -77,6 +78,7 @@ php/
       AgentOptions.php       # DTO for agent configuration
       AgentSystem.php        # Abstract AgentSystem base class
       Llm.php                # OpenAI client integration
+      LlmConfig.php          # Config DTO for the LLM
       LlmWithTools.php       # Synchronous ReAct chat loop
       MetaAgent.php          # MetaAgent (mutation operator)
       TaskAgent.php          # TaskAgent (task solver)
@@ -84,7 +86,11 @@ php/
     Contracts/
       BaseChatModel.php      # LLM invocation interface
       BaseTool.php           # Abstract class defining tools
-      Message.php            # Chat history models
+      Message.php            # Base Message class
+      AIMessage.php          # Assistant message model
+      HumanMessage.php       # User message model
+      SystemMessage.php      # System message model
+      ToolMessage.php        # Tool execution result model
     Core/
       GenerateLoop.php       # Main evolutionary loop
     Domains/
@@ -99,7 +105,6 @@ examples/
   bash/                      # Bash command generation
   calculator/                # Buggy tool fix demo
   factcheck/                 # True/false classification
-  paper_review/              # Paper accept/reject prediction
 ```
 
 ## Supported Models
@@ -113,6 +118,8 @@ $options = new AgentOptions(model: 'gpt-4o'); // 'gpt-4o', 'gpt-4o-mini', 'o3', 
 ```
 
 ## Environment Variables
+
+The framework supports loading environment variables from a `.env` file in the project root.
 
 | Variable | Description |
 |----------|-------------|

@@ -18,8 +18,8 @@ To begin hacking on the local components (`GenerateLoopConfig`, the local DOMs a
 
 ```bash
 # Clone the repository
-git clone https://github.com/lablnet/HyperFlow.git
-cd HyperFlow/php
+git clone https://github.com/lablnet/hyperflow-php.git
+cd hyperflow-php
 
 # Install dependencies
 composer install

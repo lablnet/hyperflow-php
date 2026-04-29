@@ -1,6 +1,6 @@
-import { o as setupDevToolsPlugin } from "./dist-CXn6KGXa.js";
-import { Kn as ref, Nt as onDeactivated, Ot as nextTick, U as computed, Ut as provide, Wn as reactive, Yn as shallowRef, _n as watchEffect, gn as watch, kt as onActivated, nr as unref, nt as defineComponent, pt as h, qn as shallowReactive, ut as getCurrentInstance, xt as inject, zt as onUnmounted } from "./vue.runtime.esm-bundler-CIclwLir.js";
-//#region node_modules/.pnpm/vue-router@5.0.4_@vue+compiler-sfc@3.5.32_vue@3.5.32/node_modules/vue-router/dist/useApi-C8XBqGtv.js
+import { o as setupDevToolsPlugin } from "./dist-Cn6jRu7f.js";
+import { Kn as ref, Nt as onDeactivated, Ot as nextTick, U as computed, Ut as provide, Wn as reactive, Yn as shallowRef, _n as watchEffect, gn as watch, kt as onActivated, nr as unref, nt as defineComponent, pt as h, qn as shallowReactive, ut as getCurrentInstance, xt as inject, zt as onUnmounted } from "./vue.runtime.esm-bundler-CqOwLJ7x.js";
+//#region node_modules/.pnpm/@vuepress+client@2.0.0-rc.28_@vue+compiler-sfc@3.5.32/node_modules/vue-router/dist/useApi-C8XBqGtv.js
 /*!
 * vue-router v5.0.4
 * (c) 2026 Eduardo San Martin Morote
@@ -173,7 +173,7 @@ function useRoute(_name) {
 	return inject(routeLocationKey);
 }
 //#endregion
-//#region node_modules/.pnpm/vue-router@5.0.4_@vue+compiler-sfc@3.5.32_vue@3.5.32/node_modules/vue-router/dist/devtools-DUDsFuj9.js
+//#region node_modules/.pnpm/@vuepress+client@2.0.0-rc.28_@vue+compiler-sfc@3.5.32/node_modules/vue-router/dist/devtools-DUDsFuj9.js
 /*!
 * vue-router v5.0.4
 * (c) 2026 Eduardo San Martin Morote
@@ -1190,7 +1190,7 @@ function omit(obj, keys) {
 	return ret;
 }
 //#endregion
-//#region node_modules/.pnpm/vue-router@5.0.4_@vue+compiler-sfc@3.5.32_vue@3.5.32/node_modules/vue-router/dist/vue-router.js
+//#region node_modules/.pnpm/@vuepress+client@2.0.0-rc.28_@vue+compiler-sfc@3.5.32/node_modules/vue-router/dist/vue-router.js
 /*!
 * vue-router v5.0.4
 * (c) 2026 Eduardo San Martin Morote
