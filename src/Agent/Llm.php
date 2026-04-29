@@ -15,7 +15,7 @@ class Llm implements BaseChatModel
 
     public function __construct(private LlmConfig $config)
     {
-        $apiKey = $config->apiKey ?? getenv('OPENAI_API_KEY');
+        $apiKey = $config->apiKey ?? $_ENV['OPENAI_API_KEY'] ?? getenv('OPENAI_API_KEY');
         if (!$apiKey) {
             throw new \RuntimeException("OpenAI API Key is missing. Set OPENAI_API_KEY environment variable.");
         }
