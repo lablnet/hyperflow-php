@@ -3,6 +3,9 @@
 require __DIR__ . '/../../vendor/autoload.php';
 require __DIR__ . '/CalcTool.php';
 
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
+$dotenv->safeLoad();
+
 use HyperFlow\Agent\AgentOptions;
 use HyperFlow\Agent\TaskAgent;
 use HyperFlow\Agent\MetaAgent;
